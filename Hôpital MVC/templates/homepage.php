@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $title = "Page d'accueil";
 include_once __DIR__ . './../src/includes/head.php';
 include_once __DIR__ . './../src/includes/header.php';
@@ -11,7 +12,10 @@ include_once __DIR__ . './../src/includes/header.php';
 
   <div>
     <h2>Accéder à :</h2>
-    <a href="">Ajouter un patient</a>
-    <a href="">Ajouter un rendez-vous</a>
+    <a href="./templates/list-patients.php">Liste des patients</a>
+    <a href="./templates/list-appointments.php">Liste des rendez-vous</a>
   </div>
 </body>
+
+<?php
+ob_end_flush();
