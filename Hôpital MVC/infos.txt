@@ -1,0 +1,39 @@
+Crée PAGES : 
+
+- // index.php
+    *// Lien pour rediriger. Vers : 
+            - // ajout-patients.php || (= Formulaire pour crée un patient et l'ajouter)
+            - // ajout-rdv.php || (= Formulaire pour ajouter un rdv)
+
+    *// liste-patients.php 
+            -> // Afficher liste des patients dans la page, et un lien vers ajout-patients.php
+            -> // Permettre de supprimer un patient et ses rdv
+            -> // Un champ de Recherche
+            -> // Créer une pagination
+                    *// ajout-patients.php (Qui est un formulaire)
+                    *// profil-patients.php 
+
+            -> // Afficher toutes les informations d'un patient. Et doit être accessible depuis liste-patients.php. Et Afficher infos du patient Sélectionner
+            -> // Afficher toute ses informations de ses rdv
+
+    -/* // liste-appointments.php
+            -> // Afficher la liste des rdv. Un lien vers ajout-rdv.php
+            -> // Permettre de supprimer d'un rdv !!
+
+    -/* appointments.php
+	        -> // Afficher toute infos d'un rdv. Doit être accessible depuis liste-appointments.php et afficher les infos du rdv sélectionner.
+            -> // Permettre la modification de ce rdv
+
+
+
+// Controllers :
+ Le controller est le dernier élément de la structure MVC et c'est aussi l'élément liant. Il va s'occupper de recevoir les données entrées par l'utilisateur et de communiquer les changements aux modèles. Il pourra aussi communiquer avec les modèles pour obtenir des informations qu'il pourra ensuite transférer à la vue
+
+// Modèle :
+  Souvent on associera les modèles à une base de données mais il est tout à fait possible d'avoir des modèles intéragissant avec une API externes 
+
+// Views (Templates) :
+ Les vues permettent de gérer l'affichage final de nos pages. Elles génèreront le code HTML qui sera affiché aux utilisateurs à partir des variables récupérées depuis le controller
+
+
+
