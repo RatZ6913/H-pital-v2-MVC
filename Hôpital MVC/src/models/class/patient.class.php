@@ -21,10 +21,4 @@ class Patient extends Database {
     $getListsPatients->execute();
     return $showListPatients = $getListsPatients->fetchAll();
   }
-
 }
-
-
-$patient = new Patient();
-
-// var_dump($patient);

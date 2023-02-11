@@ -9,6 +9,9 @@ $title = "Liste des patients";
 
 <body>
   <section>
+    <div>
+      <a href="./">Retour page d'accueil</a>
+    </div>
     <h1>Voici la liste de tous les patients</h1>
   </section>
 

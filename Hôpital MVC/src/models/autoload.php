@@ -6,6 +6,4 @@ spl_autoload_register(function ($class) {
 
 $pdo = new Database();
 $patient = new Patient();
-
-// $comment = new Comment();
-// $post = new Post();
+$appointment = new Appointment();

@@ -13,7 +13,7 @@ include_once __DIR__ . './../src/includes/header.php';
   <div>
     <h2>Accéder à :</h2>
     <a href="./index.php/?action=listPatients">Liste des patients</a>
-    <!-- <a href="./templates/list-appointments.php">Liste des rendez-vous</a> -->
+    <a href="./index.php/?action=listAppointments">Liste des rendez-vous</a>
   </div>
 
   <article>
@@ -27,3 +27,4 @@ include_once __DIR__ . './../src/includes/header.php';
 <?php
 $content = ob_get_clean();
 echo $content;
+
