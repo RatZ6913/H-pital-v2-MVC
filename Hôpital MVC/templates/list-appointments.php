@@ -1,8 +1,10 @@
 <?php
+ob_start();
 
 require_once('./src/controllers/list-appointments.php');
 
-ob_start();
+include_once __DIR__ . './../src/includes/head.php';
+include_once __DIR__ . './../src/includes/header.php';
 
 $title = "Liste des rendez-vous";
 ?>
@@ -21,6 +23,10 @@ $title = "Liste des rendez-vous";
     <div>
       <p>Le : <?= $appointments['date']; ?></p>
       <p>À <?= $appointments['time']; ?></p>
+      <a href="./index.php?action=addAppointments">Ajouter un rendez-vous</a>
+      <form action="<?= htmlspecialchars($_SERVER['PHP_SELF']) ;?>?action=addAppointments" method="POST">
+        <input type="submit" name="delete" value="Supprimer">
+      </form>
     </div>
   <?php
   }
@@ -29,4 +35,3 @@ $title = "Liste des rendez-vous";
 
 <?php
 $content = ob_get_clean();
-

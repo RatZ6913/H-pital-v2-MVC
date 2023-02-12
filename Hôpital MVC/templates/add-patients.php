@@ -1,16 +1,17 @@
 <?php
+
 ob_start();
 
-$title = "Page d'accueil";
+$title = "Ajouter un patient";
+
 include_once __DIR__ . './../src/includes/head.php';
 include_once __DIR__ . './../src/includes/header.php';
 
 ?>
 
-
 <body>
   <section>
-    <h1>Bienvenue sur la page d'accueil</h1>
+    <h1>Ajouter un patient</h1>
   </section>
 
   <div>

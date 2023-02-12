@@ -11,10 +11,8 @@ try {
 
     if ($_GET['action'] === "listPatients") {
       listPatients();
-
     } elseif ($_GET['action'] === "listAppointments") {
       listAppointments();
-
     } else {
       throw new Exception('Page non disponible');
     }

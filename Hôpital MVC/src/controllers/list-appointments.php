@@ -2,7 +2,6 @@
 
 require_once __DIR__ . './../models/class/appointment.class.php';
 
-
 function listAppointments(){
 
   $appointment = new Appointment();
