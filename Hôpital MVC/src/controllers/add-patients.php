@@ -1,10 +1,15 @@
 <?php
-
 require_once __DIR__ . './../models/class/patient.class.php';
-// require_once __DIR__ . './../../templates/add-patients.php';
-var_dump($_POST);
 
-if($_SERVER['REQUEST_METHOD'] === "POST"){
+function formAddPatient()
+{
+  require('./templates/add-patients.php');
+  echo $content;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+  $patient = new Patient();
+  $patient->bindParam();
 
   $input = filter_input_array(INPUT_POST, [
     'lastname' => FILTER_SANITIZE_SPECIAL_CHARS,
@@ -14,23 +19,23 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     'mail' => FILTER_SANITIZE_EMAIL
   ]);
 
-  if (empty(array_filter($input, function ($e) {
-    // Si différent de '', affiche les erreurs. Si tout est vide, alors le form est validé
-    // return $e !== '';
-  }))) {
+  $lastName = $input['lastname'] ?? '';
+  $firstname = $input['firstname'] ?? '';
+  $birthdate = $input['birthdate'] ?? '';
+  $phone = $input['phone'] ?? '';
+  $mail = $input['mail'] ?? '';
 
+  if (
+    empty($lastName) || empty($firstname)
+    || empty($birthdate) || empty($phone)
+    || empty($mail)
+  ) {
+    echo "Champ invalide ...";
+  } else {
+    // $patient = new Patient();
 
   }
-
 }
 
 
-function addPatient(){
 
-  $patient = new Patient();
-  
-
-    require('./templates/add-patients.php');
-    echo $content;
-  
-}

@@ -1,10 +1,8 @@
 <?php
 require_once __DIR__ . './../src/controllers/add-patients.php';
-
 ob_start();
 
 ?>
-
 <body>
   <section>
     <h1>Ajouter un patient</h1>
@@ -39,5 +37,4 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-echo $content;
 

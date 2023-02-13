@@ -30,7 +30,7 @@ class Patient extends Database {
     $addNewPatient->bindParam('birthdate', $this->birthDate);
     $addNewPatient->bindParam('phone', $this->phone);
     $addNewPatient->bindParam('mail', $this->mail);
-    return $addNewPatient;
+    return $addNewPatient->execute();
   }
 
 }

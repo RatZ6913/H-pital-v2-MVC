@@ -7,7 +7,7 @@ function listAppointments(){
   $appointment = new Appointment();
   $appointment->getListAppointments();
 
-  require('templates/list-appointments.php');
+  require('./templates/list-appointments.php');
   echo $content;
 }
 
