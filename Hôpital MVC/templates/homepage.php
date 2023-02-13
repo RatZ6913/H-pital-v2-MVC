@@ -1,12 +1,10 @@
 <?php
-ob_start();
 
 $title = "Page d'accueil";
-include_once __DIR__ . './../src/includes/head.php';
-include_once __DIR__ . './../src/includes/header.php';
+
+ob_start();
 
 ?>
-
 
 <body>
   <section>

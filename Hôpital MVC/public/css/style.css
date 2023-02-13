@@ -1,6 +1,18 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: saddlebrown;
 }
 
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.appointments, .patients {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid black;
+}

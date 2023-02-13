@@ -1,11 +1,7 @@
 <?php
+require_once __DIR__ . './../src/controllers/add-patients.php';
 
 ob_start();
-
-$title = "Ajouter un patient";
-
-include_once __DIR__ . './../src/includes/head.php';
-include_once __DIR__ . './../src/includes/header.php';
 
 ?>
 
@@ -14,18 +10,31 @@ include_once __DIR__ . './../src/includes/header.php';
     <h1>Ajouter un patient</h1>
   </section>
 
-  <div>
-    <h2>Accéder à :</h2>
-    <a href="./?action=listPatients">Liste des patients</a>
-    <a href="./?action=listAppointments">Liste des rendez-vous</a>
-  </div>
-
-  <article>
-    <h2>L'hôpital de Saint-Gilles</h2>
-    <div>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, neque.
-    </div>
-  </article>
+  <section>
+    <form action="./?action=addPatients" method="POST">
+      <div>
+        <label for="lastname">Nom :</label>
+        <input type="text" name="lastname" id="lastname">
+      </div>
+      <div>
+        <label for="firstname">Prénom :</label>
+        <input type="text" name="firstname" id="firstname">
+      </div>
+      <div>
+        <label for="datebirth">Date de naissance :</label>
+        <input type="date" name="datebirth" id="datebirth" value="<?= date('Y-m-d'); ?>">
+      </div>
+      <div>
+        <label for="phone">Téléphone :</label>
+        <input type="tel" name="phone" id="phone">
+      </div>
+      <div>
+        <label for="mail">Email :</label>
+        <input type="mail" name="mail" id="mail">
+      </div>
+      <input type="submit" name="addPatient" value="Ajouter">
+    </form>
+  </section>
 </body>
 
 <?php
