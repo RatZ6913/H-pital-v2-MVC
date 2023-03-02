@@ -3,7 +3,6 @@ ob_start();
 
 require_once('./src/controllers/list-appointments.php');
 
-
 $title = "Liste des rendez-vous";
 ?>
 

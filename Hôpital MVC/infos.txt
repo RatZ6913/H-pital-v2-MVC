@@ -24,8 +24,6 @@ Crée PAGES :
 	        -> // Afficher toute infos d'un rdv. Doit être accessible depuis liste-appointments.php et afficher les infos du rdv sélectionner.
             -> // Permettre la modification de ce rdv
 
-
-
 // Controllers :
  Le controller est le dernier élément de la structure MVC et c'est aussi l'élément liant. Il va s'occupper de recevoir les données entrées par l'utilisateur et de communiquer les changements aux modèles. Il pourra aussi communiquer avec les modèles pour obtenir des informations qu'il pourra ensuite transférer à la vue
 
