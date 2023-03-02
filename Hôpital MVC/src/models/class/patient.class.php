@@ -32,5 +32,4 @@ class Patient extends Database {
     $addNewPatient->bindParam('mail', $this->mail);
     return $addNewPatient->execute();
   }
-
 }

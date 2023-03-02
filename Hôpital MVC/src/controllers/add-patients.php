@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     echo "Champ invalide ...";
   } else {
     // $patient = new Patient();
-
   }
 }
 
